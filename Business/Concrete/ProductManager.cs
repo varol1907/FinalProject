@@ -54,7 +54,7 @@ namespace Business.Concrete
         public IDataResult<List<Product>> GetByUnitPrice(decimal min, decimal max)
         {
             return new SuccessDataResult<List<Product>>(productDal.GetAll(p=>p.UnitPrice>=min && p.UnitPrice <= max)); 
-        }
+        }  
 
         public IDataResult<List<ProductDetailDto>> GetProductDetails()
         {
